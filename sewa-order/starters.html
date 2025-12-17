@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Starters</title>
+        <!--connect css file for styling-->
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/order.css">
+    </head>
+
+    <body>
+        <!--***NAVBAR SECTION***-->
+        <!--top navigation bar with logo and links-->
+        <header class="navbar">
+            <a href="../home.html" class="logo">
+                <img src="https://www.pngmart.com/files/3/Star-PNG-Image.png" alt="LUNA">
+                <span class="brand">LUNA</span>
+            </a>
+
+            <nav class="nav">
+                <a href="../menu.html">Menu</a>
+                <a href="../reservations.html">Reservations</a>
+                <a href="../events.html">Events</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../giftcard.html">GiftCard</a>
+                <a href="all.html" class="active">Order</a>
+            </nav>
+        </header>
+      <!--***CATEGORY MENU***--> 
+      <!--buttons to switch between dish categories-->
+      <nav class="menu">
+        <a href="all.html" class="tab">All</a>
+        <a href="starters.html" class="tab active">Starters</a>
+        <a href="mains.html" class="tab">Mains</a>
+        <a href="sides.html" class="tab">Sides</a>
+        <a href="desserts.html" class="tab">Desserts</a>
+        <a href="drinks.html" class="tab">Drinks</a>
+      </nav>
+      <!-- ***MENU CARDS***-->
+      <!--each card shows one dish with image,name, and price-->
+      <div class="cards">
+
+      <!--bruschetta card-->
+      <div class="card" data-name="Prosciutto & Burrata Platter" data-price="13">
+      <img src="../images/burrata.jpeg" alt="burrata">
+        <div class="titleRow">
+          <div class="dishName">Prosciutto & Burrata Platter</div>
+          <div class="price">€13</div>
+        </div>
+      <!--quantity controls and add button-->
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+      <!--the rest of the cards follow the same format
+      each has an image, dish name,price and controls-->
+
+      <!--aubergine card-->
+      <div class="card" data-name="Grilled Aubergine with Ricotta Cream & Tomato Sauce" data-price="11">
+      <img src="../images/aubergine.jpg" alt="aubergine">
+        <div class="titleRow">
+          <div class="dishName">Grilled Aubergine with Ricotta Cream & Tomato Sauce</div>
+          <div class="price">€11</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- calamari card-->
+      <div class="card" data-name="Crispy Calamari with Lemon-Garlic Aiolir" data-price="14">
+      <img src="../images/calamari.jpg" alt="calamari">
+        <div class="titleRow">
+          <div class="dishName">Crispy Calamari with Lemon-Garlic Aiolir</div>
+          <div class="price">€14</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- peaches card-->
+      <div class="card" data-name="Buffalo Mozzarella with Honey-Glazed Peaches & Basil" data-price="12">
+      <img src="../images/peach.jpg" alt="peaches">
+        <div class="titleRow">
+          <div class="dishName">Buffalo Mozzarella with Honey-Glazed Peaches & Basil</div>
+          <div class="price">€12</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+      </div>
+      
+      <!--***ORDER BAR***-->
+      <!--enter table number and confirm order-->
+      <form class="order-basic-box" id="orderForm" action="place_order.php" method="POST">
+        <h3>Your Order</h3>
+        <div class="order-basic-head">
+          <span>Dish Name</span>
+          <span>Price</span>
+        </div>
+        <div id="orderList" class="order-list"></div>
+        <div class="order-total">
+          <span>Total</span>
+          <strong id="cartTotal">€0</strong>
+        </div>
+        <button id="btnClear" type="button" class="btn-clear">Clear</button>
+        <div class="order-basic-table">
+          <label for="tableNo">Table:</label>
+          <input type="number" id="tableNo" name ="table_no" min="1" placeholder="#">
+          <input type="hidden" id="cartField" name="cart">
+          <button id="placeOrder" type="button">Place Order</button>
+        </div>
+      </form>
+
+      <!--***FOOTER***-->
+      <!--COPYRIGHT TEXT AT THE BOTTOM-->
+      <footer class="site-footer">
+        &copy; 2025 LUNA Restaurant. All Rights Reserved.
+      </footer>
+      <!--JS FUNCTIONALITY-->
+      <script src="order.js"></script>
+    </body>
+</html>

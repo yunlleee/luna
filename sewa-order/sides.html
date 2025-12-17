@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sides</title>
+        <!--connect css file for styling-->
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/order.css">
+    </head>
+
+    <body>
+        <!--***NAVBAR SECTION***-->
+        <!--top navigation bar with logo and links-->
+        <header class="navbar">
+            <a href="../home.html" class="logo">
+                <img src="https://www.pngmart.com/files/3/Star-PNG-Image.png" alt="LUNA">
+                <span class="brand">LUNA</span>
+            </a>
+
+            <nav class="nav">
+                <a href="../menu.html">Menu</a>
+                <a href="../reservations.html">Reservations</a>
+                <a href="../events.html">Events</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../giftcard.html">GiftCard</a>
+                <a href="all.html" class="active">Order</a>
+            </nav>
+        </header>
+      <!--***CATEGORY MENU***--> 
+      <!--buttons to switch between dish categories-->
+      <nav class="menu">
+        <a href="all.html" class="tab">All</a>
+        <a href="starters.html" class="tab">Starters</a>
+        <a href="mains.html" class="tab">Mains</a>
+        <a href="sides.html" class="tab active">Sides</a>
+        <a href="desserts.html" class="tab">Desserts</a>
+        <a href="drinks.html" class="tab">Drinks</a>
+      </nav>
+      <!-- ***MENU CARDS***-->
+      <!--each card shows one dish with image,name, and price-->
+      <div class="cards">
+
+      <!--handcut fries card-->
+      <div class="card" data-name="Hand-Cut Fries" data-price="6">
+      <img src="../images/fries.jpg" alt="fries">
+        <div class="titleRow">
+          <div class="dishName">Hand-Cut Fries</div>
+          <div class="price">€6</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- sweet potato card-->
+      <div class="card" data-name="Sweet Potato Fries" data-price="5">
+      <img src="../images/sweet.jpg" alt="sweet">
+        <div class="titleRow">
+          <div class="dishName">Sweet Potato Fries</div>
+          <div class="price">€5</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+      </div>
+      
+      <!--***ORDER BAR***-->
+      <!--enter table number and confirm order-->
+      <form class="order-basic-box" id="orderForm" action="place_order.php" method="POST">
+        <h3>Your Order</h3>
+        <div class="order-basic-head">
+          <span>Dish Name</span>
+          <span>Price</span>
+        </div>
+        <div id="orderList" class="order-list"></div>
+        <div class="order-total">
+          <span>Total</span>
+          <strong id="cartTotal">€0</strong>
+        </div>
+        <button id="btnClear" type="button" class="btn-clear">Clear</button>
+        <div class="order-basic-table">
+          <label for="tableNo">Table:</label>
+          <input type="number" id="tableNo" name ="table_no" min="1" placeholder="#">
+          <input type="hidden" id="cartField" name="cart">
+          <button id="placeOrder" type="button">Place Order</button>
+        </div>
+      </form>
+
+      <!--***FOOTER***-->
+      <!--COPYRIGHT TEXT AT THE BOTTOM-->
+      <footer class="site-footer">
+        &copy; 2025 LUNA Restaurant. All Rights Reserved.
+      </footer>
+      <!--JS FUNCTIONALITY-->
+      <script src="order.js"></script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+/* fade-in animation for smooth loading */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* fadeIn keyframes */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* footer color tone */
+footer {
+    width: 100%;
+    color: #aaa;
+}

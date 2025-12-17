@@ -1,0 +1,259 @@
+/* this stylesheet for visual design and layout for the restaurant order
+section. for example; cards, navbar, footer, etc.*/
+
+
+/* ***MENU SECTION*** */
+/* menu bar styling (buttons: all,mains,sides etc)*/
+.menu {
+  margin-top: 80px;
+  margin-left: 80px; /* simple left offset*/
+  display: flex;
+  flex-wrap: wrap; /* go to a new line on small width*/
+  gap: 14px; /*space between buttons*/
+}
+/*each category button*/
+.menu a {
+  background-color: #1e1b4b;
+  color: #facc15;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+/*hover effect for menu buttons*/
+.menu a:hover {
+  background-color: #dbc159;
+  color: #1e1b4b;
+}
+/*active category, currently selected*/
+.menu a.active {
+  background-color: #e7e0c1;
+  color: #1e1b4b;
+}
+/* ***MENU CARDS*** */
+/* wrapper that holds all item cards*/
+.cards {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  margin-left: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap; /* wrap cards to next line*/
+  padding-bottom: 40px; /* space above footer*/
+}
+/*single item card*/
+.card {
+  width: 260px;
+  background-color: #111a2a;
+  border: 1px solid #1f2a3a;
+  border-radius: 14px;
+  padding: 12px;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+/*card cover image*/
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/*name+price in one row*/
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+/*dish name text*/
+.dishName {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+  max-width: 70%; /*keep space for price*/
+}
+/*price text styling*/
+.price {
+  color: #facc15;
+  font-weight: 700;
+}
+/*quantity and add button row*/
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+/* quantity box with - +*/
+.qty {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #0f172a;
+  border: 1px solid #1f2a3a;
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+/*quantity control button*/
+.qty button {
+  width: 26px;
+  height: 26px;
+  border: none;
+  background-color: #1a2434;
+  color: #e8eef7;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* add to order button*/
+.add {
+  border: none;
+  background-color: #e7e0c1;
+  color: #1b1b1b;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ***NAVIGATION BAR*** */
+/* top bar with logo and links*/
+.navbar {
+  background-color: #312e81;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px 18px 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/*logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+/*logo image*/
+.logo img {
+  width: 40px;
+  height: 40px;
+}
+/*brand name text*/
+.brand {
+  font-weight: 700;
+  font-size: 23px;
+  letter-spacing: 1px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+/*brand hover color change*/
+.brand:hover {
+  color: #facc15;
+}
+/* navigation links(home,menu,contact etc)*/
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+/*each navigation link*/
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 17px;
+  transition: color .3s;
+}
+/*hover effect on nav links*/
+.nav a:hover {
+  color: #facc15;
+}
+/* active navigation link style*/
+.nav a.active {
+  background-color: #facc15;
+  color: #1e1b4b;
+  padding: 6px 16px;
+  border-radius: 999px; /*pill look*/
+  font-weight: 600;
+}
+/*hover color for active link*/
+.nav a.active:hover {
+  background-color: #fde047;
+}
+/* ***FOOTER*** */
+.site-footer {
+  background-color: #1e1b4b;
+  color: rgb(204, 201, 201);
+  text-align: center;
+  padding: 18px 0;
+  font-size: 14px;
+  margin-top: auto; /*pushes footer to bottom*/
+}
+
+
+/* Basic Order Box */
+.order-basic-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    color: white;
+    backdrop-filter: blur(4px);
+}
+
+.order-basic-box h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #facc15;
+    font-weight: 700;
+}
+
+/* Header row */
+.order-basic-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 8px;
+}
+
+/* Table input + button */
+.order-basic-table {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-basic-table label {
+    font-size: 16px;
+}
+
+.order-basic-table input {
+    flex: 1;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background: #0f172a;
+    color: white;
+    outline: none;
+}
+
+.order-basic-table button {
+    background: #facc15;
+    color: #1e1b4b;
+    padding: 10px 15px;
+    border-radius: 999px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+.order-basic-table button:hover {
+    background: #ffe25c;
+}

@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>All</title>
+        <!--connect css file for styling-->
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/order.css">
+    </head>
+
+    <body>
+        <!--***NAVBAR SECTION***-->
+        <!--top navigation bar with logo and links-->
+        <header class="navbar">
+            <a href="../home.html" class="logo">
+                <img src="https://www.pngmart.com/files/3/Star-PNG-Image.png" alt="LUNA">
+                <span class="brand">LUNA</span>
+            </a>
+
+            <nav class="nav">
+                <a href="../menu.html">Menu</a>
+                <a href="../reservations.html">Reservations</a>
+                <a href="../events.html">Events</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../giftcard.html">GiftCard</a>
+                <a href="all.html" class="active">Order</a>
+            </nav>
+        </header>
+      <!--***CATEGORY MENU***--> 
+      <!--buttons to switch between dish categories-->
+      <nav class="menu">
+        <a href="all.html" class="tab active">All</a>
+        <a href="starters.html" class="tab">Starters</a>
+        <a href="mains.html" class="tab">Mains</a>
+        <a href="sides.html" class="tab">Sides</a>
+        <a href="desserts.html" class="tab">Desserts</a>
+        <a href="drinks.html" class="tab">Drinks</a>
+      </nav>
+      <!-- ***MENU CARDS***-->
+      <!--each card shows one dish with image,name, and price-->
+      <div class="cards">
+
+      <!--bruschetta card-->
+      <div class="card" data-name="Prosciutto & Burrata Platter" data-price="13">
+      <img src="../images/burrata.jpeg" alt="burrata">
+        <div class="titleRow">
+          <div class="dishName">Prosciutto & Burrata Platter</div>
+          <div class="price">€13</div>
+        </div>
+      <!--quantity controls and add button-->
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+      <!--the rest of the cards follow the same format
+      each has an image, dish name,price and controls-->
+
+      <!--aubergine card-->
+      <div class="card" data-name="Grilled Aubergine with Ricotta Cream & Tomato Sauce" data-price="11">
+      <img src="../images/aubergine.jpg" alt="aubergine">
+        <div class="titleRow">
+          <div class="dishName">Grilled Aubergine with Ricotta Cream & Tomato Sauce</div>
+          <div class="price">€11</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- calamari card-->
+      <div class="card" data-name="Crispy Calamari with Lemon-Garlic Aiolir" data-price="14">
+      <img src="../images/calamari.jpg" alt="calamari">
+        <div class="titleRow">
+          <div class="dishName">Crispy Calamari with Lemon-Garlic Aiolir</div>
+          <div class="price">€14</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- peaches card-->
+      <div class="card" data-name="Buffalo Mozzarella with Honey-Glazed Peaches & Basil" data-price="12">
+      <img src="../images/peach.jpg" alt="peaches">
+        <div class="titleRow">
+          <div class="dishName">Buffalo Mozzarella with Honey-Glazed Peaches & Basil</div>
+          <div class="price">€12</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!--hamburger card-->
+      <div class="card" data-name="Signature Beef Burger" data-price="24">
+      <img src="../images/hamb.jpg" alt="hamburger">
+        <div class="titleRow">
+          <div class="dishName">Signature Beef Burger</div>
+          <div class="price">€24</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!--grilled chicken card-->
+      <div class="card" data-name="Grilled Chicken Burger" data-price="22">
+      <img src="../images/chicken.jpeg" alt="chicken">
+        <div class="titleRow">
+          <div class="dishName">Grilled Chicken Burger</div>
+          <div class="price">€22</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- prosciutto pizza card-->
+      <div class="card" data-name="Prosciutto & Rocket Pizza" data-price="23">
+      <img src="../images/pizza.jpg" alt="pizza">
+        <div class="titleRow">
+          <div class="dishName">Prosciutto & Rocket Pizza</div>
+          <div class="price">€23</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- artichoke pizza card-->
+      <div class="card" data-name="Spicy Sausage & Artichoke Pizza" data-price="24">
+      <img src="../images/artichoke.jpeg" alt="artichoke">
+        <div class="titleRow">
+          <div class="dishName">Spicy Sausage & Artichoke Pizza</div>
+          <div class="price">€24</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- pasta card-->
+      <div class="card" data-name="Classic Bolognese Pasta" data-price="21">
+      <img src="../images/pasta.jpg" alt="pasta">
+        <div class="titleRow">
+          <div class="dishName">Classic Bolognese Pasta</div>
+          <div class="price">€21</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      
+      <!--handcut fries card-->
+      <div class="card" data-name="Hand-Cut Fries" data-price="6">
+      <img src="../images/fries.jpg" alt="fries">
+        <div class="titleRow">
+          <div class="dishName">Hand-Cut Fries</div>
+          <div class="price">€6</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- sweet potato card-->
+      <div class="card" data-name="Sweet Potato Fries" data-price="5">
+      <img src="../images/sweet.jpg" alt="sweet">
+        <div class="titleRow">
+          <div class="dishName">Sweet Potato Fries</div>
+          <div class="price">€5</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!--lava card-->
+      <div class="card" data-name="Warm Chocolate Lava Cake with Ice Cream" data-price="11">
+      <img src="../images/lava.jpg" alt="lava">
+        <div class="titleRow">
+          <div class="dishName">Warm Chocolate Lava Cake with Ice Cream</div>
+          <div class="price">€11</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- tiramisu card-->
+      <div class="card" data-name="Classic Tiramisu" data-price="10">
+      <img src="../images/tiramisu.jpg" alt="tiramisu">
+        <div class="titleRow">
+          <div class="dishName">Classic Tiramisu</div>
+          <div class="price">€10</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- pannacotta card-->
+      <div class="card" data-name="Vanilla Panna Cotta with Berry Sauce" data-price="9">
+      <img src="../images/pannacotta.jpg" alt="pannacotta">
+        <div class="titleRow">
+          <div class="dishName">Vanilla Panna Cotta with Berry Sauce</div>
+          <div class="price">€9</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- espresso martini card-->
+      <div class="card" data-name="Espresso Martini" data-price="14">
+      <img src="../images/martini.png" alt="martini">
+        <div class="titleRow">
+          <div class="dishName">Espresso Martini</div>
+          <div class="price">€14</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- margarita card-->
+      <div class="card" data-name="Margarita" data-price="13">
+      <img src="../images/margarita.png" alt="margarita">
+        <div class="titleRow">
+          <div class="dishName">Margarita</div>
+          <div class="price">€13</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- cosmopolitan card-->
+      <div class="card" data-name="Cosmopolitan" data-price="14">
+      <img src="../images/cosmopolitan.png" alt="cosmopolitan">
+        <div class="titleRow">
+          <div class="dishName">Cosmopolitan</div>
+          <div class="price">€14</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- gunniess card-->
+      <div class="card" data-name="Gunniess" data-price="7">
+      <img src="../images/guinness.jpeg" alt="guinness">
+        <div class="titleRow">
+          <div class="dishName">Gunniess</div>
+          <div class="price">€7</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!-- gunniess00 card-->
+      <div class="card" data-name="Gunniess 0.0%" data-price="6">
+      <img src="../images/guinness00.jpeg" alt="guinness00">
+        <div class="titleRow">
+          <div class="dishName">Gunniess 0.0%</div>
+          <div class="price">€6</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!--lemonade card-->
+      <div class="card" data-name="Fresh Lemonade with Mint" data-price="7">
+      <img src="../images/lemonade.png" alt="lemonade">
+        <div class="titleRow">
+          <div class="dishName">Fresh Lemonade with Mint</div>
+          <div class="price">€7</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!--water card-->
+      <div class="card" data-name="Still/Sparkling Water" data-price="5">
+      <img src="../images/water.png" alt="water">
+        <div class="titleRow">
+          <div class="dishName">Still/Sparkling Water</div>
+          <div class="price">€5</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!--coke card-->
+      <div class="card" data-name="Coca-Cola" data-price="4">
+      <img src="../images/coke.jpeg" alt="coke">
+        <div class="titleRow">
+          <div class="dishName">Coca-Cola</div>
+          <div class="price">€4</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!--coke zero card-->
+      <div class="card" data-name="Coca-Cola Zero" data-price="4">
+      <img src="../images/coke0.jpeg" alt="coke0">
+        <div class="titleRow">
+          <div class="dishName">Coca-Cola Zero</div>
+          <div class="price">€4</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+
+      <!--sprite card-->
+      <div class="card" data-name="Sprite" data-price="4">
+      <img src="../images/sprite.jpeg" alt="sprite">
+        <div class="titleRow">
+          <div class="dishName">Sprite</div>
+          <div class="price">€4</div>
+        </div>
+      
+      <div class="controls">
+        <div class="qty">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+        <button class="add">Add</button>
+      </div>
+      </div>
+      </div>
+      
+      <!--***ORDER BAR***-->
+      <!--enter table number and confirm order-->
+      <form class="order-basic-box" id="orderForm" action="place_order.php" method="POST">
+        <h3>Your Order</h3>
+        <div class="order-basic-head">
+          <span>Dish Name</span>
+          <span>Price</span>
+        </div>
+        <div id="orderList" class="order-list"></div>
+        <div class="order-total">
+          <span>Total</span>
+          <strong id="cartTotal">€0</strong>
+        </div>
+        <button id="btnClear" type="button" class="btn-clear">Clear</button>
+        <div class="order-basic-table">
+          <label for="tableNo">Table:</label>
+          <input type="number" id="tableNo" name ="table_no" min="1" placeholder="#">
+          <input type="hidden" id="cartField" name="cart">
+          <button id="placeOrder" type="button">Place Order</button>
+        </div>
+      </form>
+
+      <!--***FOOTER***-->
+      <!--COPYRIGHT TEXT AT THE BOTTOM-->
+      <footer class="site-footer">
+        &copy; 2025 LUNA Restaurant. All Rights Reserved.
+      </footer>
+      <!--JS FUNCTIONALITY-->
+      <script src="order.js"></script>
+    </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive setup -->
+    <title>LUNA - Reservations</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind for quick styling -->
+    <link rel="stylesheet" href="css/reservations.css"> <!-- specific CSS for reservations -->
+     <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="flex flex-col min-h-screen">
+    <!-- header -->
+    <header class="bg-indigo-900 text-white p-4 flex justify-between items-center shadow-md fade-in">
+        <div class="flex items-center space-x-2">
+            <img src="https://www.pngmart.com/files/3/Star-PNG-Image.png" alt="Logo" class="w-10 h-10">
+            <a href="home.html"
+                class="text-2xl font-bold tracking-wider hover:text-yellow-400 transition">LUNA</a>
+        </div>
+        <nav class="space-x-4">
+            <a href="menu.html" class="hover:text-yellow-400">Menu</a>
+            <a href="reservations.html" class="hover:text-yellow-400">Reservations</a>
+            <a href="events.html" class="hover:text-yellow-400">Events</a>
+            <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+            <a href="giftcard.html" class="hover:text-yellow-400">Giftcard</a>
+            <a href="sewa-order/all.html"
+                class="hover:text-yellow-400 font-semibold bg-yellow-400 text-indigo-900 px-3 py-1 rounded-full transition">Order</a>
+        </nav>
+    </header>
+
+    <!-- main reservation section -->
+    <main class="m-6 p-6 max-w-lg mx-auto bg-indigo-950/60 rounded-2xl shadow-2xl border border-indigo-700 fade-in">
+        <h2 class="text-3xl font-bold text-center mb-3 text-yellow-400 drop-shadow-lg">Reserve Your Table</h2>
+
+        <p class="text-gray-300 text-center mb-5">
+            Treat yourself to an unforgettable dining experience at
+            <span class="font-semibold text-yellow-300">LUNA</span>! Enjoy authentic flavors, cozy ambience, and
+            great service. Reserve your table now and skip the wait! The maximum number of guests allowed is 10.
+        </p>
+
+        <!-- form -->
+        <!-- add name="" for php and mySQL -->
+        <form id="reservationForm" class="space-y-4" action="reservations.php" method="post">
+            <input type="text" id="rname" name="name" placeholder="Full Name" required
+                class="w-full bg-gray-800 border border-gray-600 text-white p-3 rounded-lg">
+            <input type="email" id="remail" name="email" placeholder="Email" required
+                class="w-full bg-gray-800 border border-gray-600 text-white p-3 rounded-lg">
+            <input type="date" id="rdate" name="date" required
+                class="w-full bg-gray-800 border border-gray-600 text-white p-3 rounded-lg">
+            <input type="time" id="rtime" name="time" required
+                class="w-full bg-gray-800 border border-gray-600 text-white p-3 rounded-lg">
+            <input type="number" id="rguests" name="guests" placeholder="Guests" min="1" max="10" required
+                class="w-full bg-gray-800 border border-gray-600 text-white p-3 rounded-lg">
+
+            <!-- submit button -->
+            <input type="submit"
+                class="w-full bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-semibold py-3 rounded-full shadow-lg transition transform hover:scale-105 glow">
+        </input>
+        </form>
+
+        <!-- success message -->
+        <p id="successMsg" class="hidden text-green-400 text-center mt-4 font-semibold">
+            Reservation Successful! We look forward to seeing you soon at
+            <span class="text-yellow-300">LUNA</span>.
+        </p>
+    </main>
+    <!-- JavaScript for gettin valid value in reservation form-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("reservationForm");
+            const successMsg = document.getElementById("successMsg");
+            const date = document.getElementById("rdate");
+
+            // prevent past date selection 
+            if (date) {
+                const today = new Date();
+                let year = today.getFullYear();
+                let month = today.getMonth() + 1;
+                let day = today.getDate();
+
+                if (month < 10) {
+                    month = "0" + month;
+                }
+                if (day < 10) {
+                    day = "0" + day;
+                }
+
+                date.min = year + "-" + month + "-" + day;
+            }
+
+            if (!form) return;
+
+            form.addEventListener("submit", function (event) {
+                const name = document.getElementById("rname").value.trim();
+                const guests = document.getElementById("rguests").value;
+                const chosenDate = document.getElementById("rdate").value;
+
+                // check the name input
+                if (name.length < 2) {
+                    alert("Name must be at least 2 characters long.");
+                    return;
+                }
+
+                // check the number of guests
+                if (guests < 1 || guests > 10) {
+                    alert("Guest count must be between 1 and 10.");
+                    return;
+                }
+                
+                // check the if the there is the date input
+                if (!chosenDate) {
+                    alert("Please select a date.");
+                    return;
+                }
+
+                // check the date is ealier than today
+                if (chosenDate < date.min) {
+                    alert("Please select a date from today or later.");
+                    return;
+                }
+
+                 form.submit();
+                 if (successMsg) {
+                   successMsg.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        });
+    </script>  
+    
+    <!-- footer -->
+    <footer class="bg-indigo-950 text-gray-300 text-center py-4 text-sm tracking-wide fade-in">
+        <p>&copy; 2025 LUNA. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

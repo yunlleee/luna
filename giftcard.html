@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNA - Gift Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/three-common.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="flex flex-col min-h-screen bg-indigo-950">
+
+    <!-- Header -->
+    <header class="bg-indigo-900/90 text-white p-4 flex justify-between items-center shadow-md fade-in">
+        <div class="flex items-center space-x-2">
+            <img src="https://www.pngmart.com/files/3/Star-PNG-Image.png" alt="LUNA Logo" class="w-10 h-10">
+            <a href="home.html" class="text-2xl font-bold tracking-wider hover:text-yellow-400 transition">LUNA</a>
+        </div>
+        <nav class="space-x-4">
+            <a href="menu.html" class="hover:text-yellow-400">Menu</a>
+            <a href="reservations.html" class="hover:text-yellow-400">Reservations</a>
+            <a href="events.html" class="hover:text-yellow-400">Events</a>
+            <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+            <a href="giftcard.html" class="hover:text-yellow-400">Giftcard</a>
+            <a href="sewa-order/all.html"
+                class="hover:text-yellow-400 font-semibold bg-yellow-400 text-indigo-900 px-3 py-1 rounded-full transition">Order</a>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="flex-grow py-12 fade-in">
+        <h2 class="text-center text-4xl font-bold text-yellow-400 mb-10 drop-shadow-lg">LUNA Gift Cards</h2>
+
+        <p class="text-center text-gray-300 max-w-2xl mx-auto mb-12 px-4">
+            Celebrate life’s special moments with a touch of luxury. Surprise your loved ones with a
+            <span class="text-yellow-300 font-semibold">LUNA Gift Card</span> — perfect for birthdays, romantic dates,
+            or just to make someone smile.
+        </p>
+
+        <!-- Gift Cards -->
+        <div class="flex flex-col md:flex-row justify-center items-center gap-10 px-6">
+
+            <!-- Birthday Gift Card -->
+            <div
+                class="bg-indigo-950/70 border border-indigo-700 rounded-2xl shadow-2xl p-6 max-w-sm text-center hover:scale-105 transition">
+                <img src="images/giftcard2.jpeg" class="rounded-xl shadow-lg mb-5 w-full h-56 object-cover">
+                <h3 class="text-2xl font-semibold text-yellow-300 mb-2">Birthday Gift Card</h3>
+                <p class="text-gray-300 mb-4">Make their birthday unforgettable with a luxury dining experience.</p>
+                <p class="text-yellow-400 font-bold mb-4 text-lg">Price: €50</p>
+                <button onclick="openPayment('Birthday Gift Card', 50)"
+                    class="bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-semibold py-2 px-6 rounded-full shadow-lg">
+                    Purchase Gift Card
+                </button>
+            </div>
+
+            <!-- Date Night Gift Card -->
+            <div
+                class="bg-indigo-950/70 border border-indigo-700 rounded-2xl shadow-2xl p-6 max-w-sm text-center hover:scale-105 transition">
+                <img src="images/gifrcard1.jpeg" class="rounded-xl shadow-lg mb-5 w-full h-56 object-cover">
+                <h3 class="text-2xl font-semibold text-yellow-300 mb-2">Date Night Gift Card</h3>
+                <p class="text-gray-300 mb-4">A romantic dinner under the stars for two.</p>
+                <p class="text-yellow-400 font-bold mb-4 text-lg">Price: €75</p>
+                <button onclick="openPayment('Date Night Gift Card', 75)"
+                    class="bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-semibold py-2 px-6 rounded-full shadow-lg">
+                    Purchase Gift Card
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="hidden fixed inset-0 bg-black/70 flex justify-center items-center px-4">
+        <div class="bg-indigo-900 text-white p-6 rounded-2xl w-full max-w-md shadow-2xl border border-indigo-700">
+
+            <h2 class="text-2xl font-bold text-yellow-300 mb-4 text-center">Gift Card Payment</h2>
+
+            <p class="text-center text-gray-300 mb-6" id="selectedCardText"></p>
+
+            <!-- Payment Form -->
+            <!-- add name="" for php and mySQL -->
+            <form id="paymentForm" class="space-y-4" action="giftcard.php" method="POST">
+
+                <input type="text" id="fullname" name="name" placeholder="Full Name"
+                    class="w-full p-2 rounded bg-indigo-800 border border-indigo-700 text-white" required>
+
+                <input type="email" id="email" name="email" placeholder="Email Address"
+                    class="w-full p-2 rounded bg-indigo-800 border border-indigo-700 text-white" required>
+
+                <!-- Mobile with +353 prefix -->
+                <div class="flex">
+                    <span
+                        class="px-3 flex items-center bg-indigo-800 border border-indigo-700 rounded-l text-gray-300">+353</span>
+                    <input type="tel" id="mobile" name="phone" placeholder="Mobile Number"
+                        class="w-full p-2 rounded-r bg-indigo-800 border border-indigo-700 text-white" required>
+                </div>
+
+                 <input type="hidden" id="gift_type" name="gift_type">
+                <input type="hidden" id="gift_price" name="gift_price">
+
+
+                <input type="text" id="cardnumber" placeholder="Card Number"
+                    class="w-full p-2 rounded bg-indigo-800 border border-indigo-700 text-white" required>
+
+                <div class="flex gap-4">
+                    <input type="text" id="expiry" placeholder="MM/YY"
+                        class="w-1/2 p-2 rounded bg-indigo-800 border border-indigo-700 text-white" required>
+
+                    <input type="password" id="cvv" placeholder="CVV"
+                        class="w-1/2 p-2 rounded bg-indigo-800 border border-indigo-700 text-white" required>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-semibold py-2 rounded-full mt-4">
+                    Pay Now
+                </button>
+
+                <!-- Visa + Mastercard Icons -->
+                <div class="flex justify-center gap-4 mt-3 opacity-80">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" class="h-6">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"
+                        class="h-6">
+                </div>
+
+                <button type="button" onclick="closePayment()"
+                    class="w-full mt-2 text-gray-300 hover:text-white text-sm">
+                    Cancel
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-950/90 text-gray-300 text-center py-4 text-sm tracking-wide fade-in mt-10">
+        <p>&copy; 2025 LUNA Restaurant. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JS for gift cards payment-->
+    <script>
+        // Save the slected giftcard valueㄴ
+        let selectedCard = "";
+        let selectedPrice = 0;
+
+        // show the chosen gift cards detail
+        function openPayment(card, price) {
+            selectedCard = card;
+            selectedPrice = price;
+            document.getElementById("selectedCardText").innerText =
+                `${card} — Total: €${price}`;
+            document.getElementById("paymentModal").classList.remove("hidden");
+        }
+
+        function closePayment() {
+            document.getElementById("paymentModal").classList.add("hidden");
+        }
+
+        // Show the success messege 
+        document.getElementById("paymentForm").addEventListener("submit", function (e) {
+            alert(`Payment Successful!\n\nYou purchased the ${selectedCard} for €${selectedPrice}.\nA confirmation email will be sent shortly.`);
+            closePayment();
+        });
+    </script>
+
+</body>
+
+</html>

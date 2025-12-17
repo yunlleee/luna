@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"> <!-- character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- responsive view -->
+    <title>LUNA - Events</title>
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind for quick styling -->
+    <link rel="stylesheet" href="css/three-common.css">  <!-- specific css for events -->
+     <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <!-- header section -->
+    <header class="bg-indigo-900 text-white p-4 flex justify-between items-center shadow-md fade-in">
+        <div class="flex items-center space-x-2">
+            <img src="https://www.pngmart.com/files/3/Star-PNG-Image.png" alt="Star" class="w-10 h-10">
+            <a href="home.html"
+                class="text-2xl font-bold tracking-wider hover:text-yellow-400 transition">LUNA</a>
+        </div>
+        <nav class="space-x-4">
+            <a href="menu.html" class="hover:text-yellow-400">Menu</a>
+            <a href="reservations.html" class="hover:text-yellow-400">Reservations</a>
+            <a href="events.html" class="hover:text-yellow-400">Events</a>
+            <a href="contact.html" class="hover:text-yellow-400">Contact</a>
+            <a href="giftcard.html" class="hover:text-yellow-400">Giftcard</a>
+            <a href="sewa-order/all.html"
+                class="hover:text-yellow-400 font-semibold bg-yellow-400 text-indigo-900 px-3 py-1 rounded-full transition">Order</a>
+        </nav>
+    </header>
+
+    <!-- main event section -->
+    <main class="flex-grow m-6 p-6 fade-in text-center">
+        <h2 class="text-4xl font-bold text-yellow-400 mb-8 drop-shadow-lg">Upcoming Events</h2>
+
+        <div
+            class="bg-indigo-950/60 rounded-2xl shadow-2xl p-6 md:max-w-2xl mx-auto border border-indigo-700 text-left">
+            <h3 class="text-2xl font-semibold text-yellow-300 mb-2">Spice Fiesta Live Cooking Show</h3>
+            <p class="text-gray-300 mb-3 leading-relaxed">
+                Join us every Friday evening for our <strong>Spice Fiesta</strong>! Enjoy live cooking with our head
+                chef,
+                featuring Indian spices, ambient music, and a tasting menu under the stars.
+            </p>
+
+            <!-- special offer block -->
+            <div class="text-gray-200 mb-4">
+                <h4 class="text-yellow-300 font-semibold mb-1">Special Offer – Time Limited</h4>
+                <p class="text-gray-300 leading-relaxed">
+                    Enjoy a special dinner at Luna. Treat your friends, loved ones, and family to an unforgettable
+                    evening filled with great food and a warm atmosphere.
+                </p>
+                <p class="text-gray-300 mt-2 leading-relaxed">
+                    Receive <strong>10% off all main dishes</strong> ordered between <strong>5:00 PM and 7:00
+                        PM</strong>
+                    on weekdays. This offer is available until <strong>November 15, 2025</strong> — don’t miss the
+                    chance
+                    to make your evenings at Luna more special.
+                </p>
+                <p class="text-gray-300 mt-2">We look forward to welcoming you soon.</p>
+            </div>
+
+            <p class="text-gray-400"><strong>Date:</strong> Every Friday, 7:00 PM</p>
+            <p class="text-gray-400 mb-4"><strong>Location:</strong> LUNA Main Hall</p>
+
+            <a href="reservations.html"
+                class="inline-block mt-4 bg-yellow-400 hover:bg-yellow-500 text-indigo-900 font-semibold py-2 px-5 rounded-full shadow-lg transition transform hover:scale-105 glow">
+                Reserve Your Spot
+            </a>
+        </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-indigo-950 text-gray-300 text-center py-4 text-sm tracking-wide fade-in">
+        <p>&copy; 2025 LUNA Restaurant. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
