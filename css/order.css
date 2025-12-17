@@ -257,3 +257,95 @@ section. for example; cards, navbar, footer, etc.*/
 .order-basic-table button:hover {
     background: #ffe25c;
 }
+
+/*dish Name/Amount heder*/
+.order-basic-head{
+  display:flex;
+  justify-content:space-between;
+  font-size: 17px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+/*list container*/
+.order-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+/*each row in the list*/
+.order-item{
+  display:flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+
+/*cart rows with controls*/
+.order-row{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.order-row .left{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.order-row .name{
+  font-size: 15px;
+}
+
+.order-row .controls{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.order-row .mini-btn{
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: #1a2434;
+  color: #e8eef7;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.order-row .pcs{
+  min-width: 18px;
+  text-align: center;
+}
+
+.order-row .sum{
+  color: #facc15;
+  font-weight: 800;
+  text-align: right;
+  min-width: 60px;
+}
+
+.order-total{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 12px;
+  font-size: 16px;
+}
+
+.btn-clear{
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: #1a2434;
+  color: #e2e8f0;
+}
